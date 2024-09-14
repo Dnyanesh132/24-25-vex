@@ -27,3 +27,10 @@ pros::Motor driveRightBackTop(8, pros::E_MOTOR_GEARSET_18, true, pros::E_MOTOR_E
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
 //pnuematics
+//NEED TO CHECK LATER I HAVE NO CLUE!!!
+pros::ADIDigitalOut (elevPort);
+
+//sensors 
+// pros::ADIDigitalIn autonSelector(autonSelectorPort); AUTON SELECTOR
+// pros::Imu imuObj(imuPort);   IMU FOR AUTON
+//MAY LATER IMPLEMENT TRACKING WHEELS

@@ -9,9 +9,8 @@ void opcontrol() {
     //some code to control drive-
     setDriveMotors();
 
-    //some code to control intake-
-
-    //some code to control belt-
+    //some code to control intake/belt-
+    setIntakeMotors();
 
     //some code to control mogo
     //
