@@ -28,7 +28,8 @@ pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
 //pnuematics
 //NEED TO CHECK LATER I HAVE NO CLUE!!!
-pros::ADIDigitalOut (elevPort);
+pros::ADIDigitalOut piston('A'); //A is like the port it should be plugged into...? idk
+    
 
 //sensors 
 // pros::ADIDigitalIn autonSelector(autonSelectorPort); AUTON SELECTOR
