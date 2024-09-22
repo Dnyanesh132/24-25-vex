@@ -29,6 +29,7 @@ pros::Controller controller(pros::E_CONTROLLER_MASTER);
 //pnuematics
 //NEED TO CHECK LATER I HAVE NO CLUE!!!
 pros::ADIDigitalOut piston('A'); //A is like the port it should be plugged into...? idk
+pros::ADIDigitalOut piston('B');                              //B is like the port thing it should be plugged into? idk adding anoteher motor
     
 
 //sensors 

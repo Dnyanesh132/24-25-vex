@@ -8,7 +8,12 @@
 extern pros::Motor intake;  //extern = (across files) --> declaring that there is a intake motor
                             //which will later be used in our cpp file (defined)
 extern pros::Motor belt;
+
+
+/// HELPEHEEPLELPE
 //LMFAO HOW DO U DO PNUEMATICS!?!?
+extern pros::ADIDigitalOut pneumaticOne;
+extern pros::ADIDigitalOut pneumaticTwo;
 
 //leftside drive
 extern pros::Motor driveLeftBackTop;
@@ -24,4 +29,4 @@ extern pros::Motor driveRightFront;
 extern pros::Controller controller;
 
 //miscellaneous
-// #define adsoijads 3000
+extern pros::ADIGyro gyro;

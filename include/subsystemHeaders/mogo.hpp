@@ -1,6 +1,6 @@
 #include "main.h"
 
-void setMogo(int p);
+void setMogo(int p); 
 
 void setMogoSolenoids();
 
