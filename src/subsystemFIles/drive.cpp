@@ -1,8 +1,10 @@
 #include "main.h"
 
-pros::ADIGyro gyro('C', 1)  //USING THE IMU FIX PORT LATER 
+//pros::ADIGyro gyro('C', 1)  //USING THE IMU FIX PORT LATER 
 //FIX LATER/// WHAT THE HELL IS OUR GRYO SCALE? gyro(port, scale)
 //scale it up so for the gyro thingy it returns ur angle * 10, some gryos are weird..
+pros::Imu inertial_sensor(1); //CHANGE THE PORT VALUE
+
 
 //using those functions
 
@@ -36,11 +38,11 @@ void setDriveMotors() {
 
    //making a controller deadzone (within this area nothing happens) --> ask driver later for input
    if (abs(leftJoystick) < 10) {
-    leftJoyStick = 0;
+        leftJoyStick = 0;
    }
 
    if (abs(rightJoystick) < 10) {
-    rightJoyStick = 0;
+        rightJoyStick = 0;
    }
 
    setDrive(leftJoystick, rightJoystick); //defining function
@@ -66,11 +68,11 @@ void translate(int units, int voltage) {
     
     //reset motor encoder- reset to 0 and then go more
     resetDriveEncodeers();
-    gyro.reset();
+    intertial_sensor.reset();
 
     //drive forward until units are reached
     while(averageDriveEncoderValue < final(units)) { 
-        setDrive(voltage * direction + gyro.get_value(), voltage * direction - gyro.get_value());
+        setDrive(voltage * direction + inertial_sensor.get_yaw(), voltage * direction - intertial_sensor.get_yaw()); //before was gyro.get_value()
         //using gyro to like adjust in case we hit something.... I could possibly divide if overcorrecting..
         pros::delay(10);
     }

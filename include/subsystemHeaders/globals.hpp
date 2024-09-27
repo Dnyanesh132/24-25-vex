@@ -29,4 +29,5 @@ extern pros::Motor driveRightFront;
 extern pros::Controller controller;
 
 //miscellaneous
-extern pros::ADIGyro gyro;
+//extern pros::ADIGyro gyro;
+extern pros::Imu imu_sensor;

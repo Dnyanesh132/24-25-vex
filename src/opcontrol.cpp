@@ -10,16 +10,17 @@ void opcontrol() {
         //I ADDED THIS JUST TO SEE HOW GIT CHANGES//
 
     //some code to control drive-
-    setDriveMotors();
+        setDriveMotors();
 
     //some code to control intake/belt-
-    setIntakeMotors();
+        setIntakeMotors();
 
     //some code to control mogo
     //NEED TO CHECK OVER MY CODE HERE
     // HOW DO YOU DO PNUEMATICS!!!
-    setMogoSolenoids();
+        setMogoSolenoids(); //WHHOOPS need to make toggle.. 
 
-    pros::delay(10); //good to add delay becuz..
+        pros::delay(10); //good to add delay becuz.. 
+   
     }
 }

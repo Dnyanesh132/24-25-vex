@@ -17,15 +17,13 @@ void setMogo(bool extend) {
 
 void setMogoSolenoids(bool extend) {
     
-    bool extendPiston;
+    bool extendPiston = false;
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
-        extendPiston = true;
-    } else {
-        extendPiston = false;
+        extendPiston = !extendPiston;
     }
-
     setMogo(extendPiston);
-     
+    pros.delay(20);
+    
 }
 
 

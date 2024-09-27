@@ -38,11 +38,11 @@ void initialize() {
 
 	//gyro
 	 //gyro
-    pros::ADIGyro gyro('C', 1);
+   // pros::ADIGyro gyro('C', 1);
+	pros:: intertial_sensor.reset();
     pros::delay(2000); //needs 2 seconds to calibrate sensor.
     //gyros help to somewhat like correct urself
-    //left turn is positive and right is negative?, depends on like how u place ur pins
-    //im assuming left is positve right.
+    //left turn is negative and right is positive---> will need to fix
 }
 
 /**
